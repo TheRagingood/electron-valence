@@ -1,6 +1,6 @@
 {
   "name": "sn-electron-valence",
-  "version": "0.0.4-beta1",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "license": "MIT",
