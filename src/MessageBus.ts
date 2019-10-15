@@ -31,7 +31,7 @@ export class FrameMessageBus extends MessageBus {
   constructor(private targetWindow: Window = window) {
     super();
     targetWindow.addEventListener('message', (event) => {
-      if (event.data.startsWith(FRAME_MESSAGE_PREFIX)) {
+      if (typeof event.data === 'string' && event.data.startsWith(FRAME_MESSAGE_PREFIX)) {
         this.notify((event.data as string).substr(FRAME_MESSAGE_PREFIX.length));
       }
     });
